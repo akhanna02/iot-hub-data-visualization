@@ -66,7 +66,7 @@ $(document).ready(function () {
     options: basicOption
   });
 
-  var ws = new WebSocket('wss://' + location.host);
+  var ws = new WebSocket('wss://' + process.env['WebSocketHost']);
   ws.onopen = function () {
     console.log('Successfully connect WebSocket');
   }
