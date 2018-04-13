@@ -41,7 +41,7 @@ $(document).ready(function () {
         id: 'Temperature',
         type: 'linear',
         scaleLabel: {
-          labelString: 'Temperature(C)',
+          labelString: 'Temperature(F)',
           display: true
         },
         position: 'left',
@@ -78,7 +78,7 @@ $(document).ready(function () {
         return;
       }
       timeData.push(obj.time);
-      temperatureData.push(obj.temperature);
+      temperatureData.push((obj.temperature * 1.8)+32);
       // only keep no more than 50 points in the line chart
       const maxLen = 50;
       var len = timeData.length;
